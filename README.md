@@ -1,2 +1,0 @@
-﻿# lerngolang
-Практическое изучение golang
