@@ -7,7 +7,7 @@ import (
 )
 
 func queryHandler(w http.ResponseWriter, r *http.Request) {
-	// Получаем query параметры
+	
 	name := r.URL.Query().Get("name")
 	age := r.URL.Query().Get("age")
 
