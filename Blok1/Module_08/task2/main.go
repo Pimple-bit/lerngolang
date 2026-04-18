@@ -62,9 +62,7 @@ func NewCar(
 }
 
 func (c *Car) HorsePowerUp(horsePower int) {
-	// что будет если нам в этот метод передадут отрицательное horsePower?
-	// car.HorsePowerUp(-5000)?
-	// как пофиксить?
+
 
 	if c.HorsePower+horsePower > 1000 {
 		fmt.Println("Вы не можете на столько сильно увеличить мощность машины")
@@ -75,9 +73,7 @@ func (c *Car) HorsePowerUp(horsePower int) {
 }
 
 func (c *Car) HorsePowerDown(horsePower int) {
-	// что будет если нам в этот метод передадут отрицательное horsePower?
-	// car.HorsePowerUp(-5000)?
-	// как пофиксить?
+
 
 	if c.HorsePower-horsePower < 50 {
 		fmt.Println("Вы не можете на столько сильно уменьшить мощность машины")

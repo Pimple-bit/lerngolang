@@ -29,7 +29,7 @@ var (
 	mu      sync.Mutex
 )
 
-// POST /books — добавить новую книгу
+// POST /books 
 func addBookHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
 		http.Error(w, "Method Not Allowed", http.StatusMethodNotAllowed)
@@ -55,7 +55,7 @@ func addBookHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Добавлена книга:", book)
 }
 
-// PATCH /books/{id}/read — отмечает книгу как прочитанную
+// PATCH /books/id/read 
 func markReadHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPatch {
 		http.Error(w, "Method Not Allowed", http.StatusMethodNotAllowed)
@@ -85,7 +85,7 @@ func markReadHandler(w http.ResponseWriter, r *http.Request) {
 	http.Error(w, "Book not found", http.StatusNotFound)
 }
 
-// GET /books/{id} — получить информацию о конкретной книге
+// GET /books/
 func getBookHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodGet {
 		http.Error(w, "Method Not Allowed", http.StatusMethodNotAllowed)
@@ -107,7 +107,7 @@ func getBookHandler(w http.ResponseWriter, r *http.Request) {
 	http.Error(w, "Book not found", http.StatusNotFound)
 }
 
-// GET /books — получить список всех книг с фильтрацией
+// GET /books 
 func listBooksHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodGet {
 		http.Error(w, "Method Not Allowed", http.StatusMethodNotAllowed)
@@ -151,7 +151,7 @@ func listBooksHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Список книг отправлен с фильтром:", r.URL.RawQuery)
 }
 
-// DELETE /books/{id} — удалить книгу
+// DELETE /books/{id} 
 func deleteBookHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodDelete {
 		http.Error(w, "Method Not Allowed", http.StatusMethodNotAllowed)

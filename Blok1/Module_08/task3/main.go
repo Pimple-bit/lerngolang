@@ -15,7 +15,7 @@ type Flat struct {
 	Address string
 	Space   float64
 	Level   int
-	Cost    int // usd
+	Cost    int 
 }
 
 func NewFlat(address string, space float64, level int, cost int) Flat {

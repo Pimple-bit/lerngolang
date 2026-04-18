@@ -23,7 +23,7 @@ func main() {
 
 	var wg sync.WaitGroup
 
-	gardenersCount := rand.Intn(5) + 1 // случайное количество огородников
+	gardenersCount := rand.Intn(5) + 1 // случайное кол-во
 	fmt.Println("Gardeners working:", gardenersCount)
 
 	for i := 1; i <= gardenersCount; i++ {
